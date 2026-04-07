@@ -35,8 +35,9 @@ jobs:
       # Installerar beroenden från package-lock.json
         run: npm ci
       - name: Build
-      # Bygg projektet med Vite
-        run: npm run build
+      # Bygg projektet med Vite och lägg till '/autodep/' till bas-URL:en
+      # Detta är superviktigt - annars hittas inte projektfilerna
+        run: npm run build -- --base /autodep/ 
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
