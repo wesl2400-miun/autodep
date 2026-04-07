@@ -1,5 +1,5 @@
 import { ROUTES } from "../logic/data/routes.js";
-import { Navbar } from "./units/navbar.js";
+import { Nav } from "./units/Nav.js";
 import { node } from "./utils/utils.js";
 
-new Navbar(node('navbar'), ROUTES);
+new Nav(node('navbar'), ROUTES);

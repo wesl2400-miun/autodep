@@ -2,7 +2,7 @@ import { STYLE } from "../refs/style.js";
 import { newImgBtn, newNode } from "../utils/utils.js";
 import { RouteList } from "./RouteList.js";
 
-export class Navbar {
+export class Nav {
   constructor(parent, routes) {
     this._addMenBtn(parent);
     this._routeList = new RouteList(parent, routes);
