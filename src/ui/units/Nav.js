@@ -1,6 +1,7 @@
 import { STYLE } from "../refs/style.js";
 import { newImgBtn, newNode } from "../utils/utils.js";
 import { RouteList } from "./RouteList.js";
+import '../config/nav.js';
 
 export class Nav {
   constructor(parent, routes) {

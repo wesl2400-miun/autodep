@@ -1,6 +1,7 @@
 import { NODE_ID } from "../refs/node-id.js";
 import { Picture } from "../units/Picture.js";
 import { node } from "../utils/utils.js";
+import "../config/gallery.js";
 
 const gallNode = node(NODE_ID.GALLERY);
 
