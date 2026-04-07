@@ -12,3 +12,15 @@ export const newNode = (type, text = null,
   return tag;
 }
 
+export const newImgBtn = (alt, src, parent) => {
+  const btn = newNode('button', 
+    null, null, parent);
+  const img = newNode('img', 
+    null, null, btn);
+  const modBtn = (altTxt, imgSrc) => {
+    img.alt = altTxt;
+    img.src = imgSrc;
+  };
+  modBtn(alt, src);
+  return { btn, modBtn };
+}

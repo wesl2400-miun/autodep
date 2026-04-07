@@ -1,29 +1,38 @@
-import { newNode, node } from "../utils/utils.js";
+import { newImgBtn, newNode } from "../utils/utils.js";
 import { RouteList } from "./RouteList.js";
 
 export class Navbar {
   constructor(parent, routes) {
-    this._wireMenBtn(parent);
+    this._addMenBtn(parent);
     this._routeList = new RouteList(parent, routes);
+    this._routeList.hide();
   }
 
-  _wireMenBtn = (parent) => {
-    const menuBtn = newNode('button', 
-      'Open Menu', null, parent);
+  _addMenBtn = (parent) => {
     this._closed = true;
-    menuBtn.addEventListener('click', () => {
-      this._onClick(menuBtn);
-    });
+    const menu = newNode('div', null, 
+      'menu', parent);
+    const src = () => this._closed
+      ? './src/ui/assets/open-menu.svg'
+      : './src/ui/assets/close-menu.svg';
+    const alt = () => this._closed
+      ? 'Öppna menyn'
+      : 'Stäng menyn';
+    const menBtn = newImgBtn(
+      alt(), src(), menu);
+    this._wireMenBtn(menBtn, alt, src);
   }
 
-  _onClick = (menuBtn) => {
-    if(this._closed) {
-      menuBtn.textContent = 'Close Menu';
-      this._routeList.show();
-    } else {
-      menuBtn.textContent = 'Open Menu';
-      this._routeList.hide();
-    }
-    this._closed = !this._closed;
+  _wireMenBtn = (menBtn, alt, src) => {
+    const { btn, modBtn } = menBtn;
+    btn.addEventListener('click', () => {
+      if(this._closed) {
+        this._routeList.show();
+      } else {
+        this._routeList.hide();
+      }
+      this._closed = !this._closed;
+      modBtn(alt(), src())
+    });
   }
 }
