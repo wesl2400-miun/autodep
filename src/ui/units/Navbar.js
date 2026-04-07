@@ -1,3 +1,4 @@
+import { STYLE } from "../refs/style.js";
 import { newImgBtn, newNode } from "../utils/utils.js";
 import { RouteList } from "./RouteList.js";
 
@@ -11,7 +12,7 @@ export class Navbar {
   _addMenBtn = (parent) => {
     this._closed = true;
     const menu = newNode('div', null, 
-      'menu', parent);
+      STYLE.MENU, parent);
     const src = () => this._closed
       ? './src/ui/assets/open-menu.svg'
       : './src/ui/assets/close-menu.svg';

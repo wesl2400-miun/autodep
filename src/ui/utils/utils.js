@@ -17,6 +17,8 @@ export const newImgBtn = (alt, src, parent) => {
     null, null, parent);
   const img = newNode('img', 
     null, null, btn);
+  img.width = '35';
+  img.height = '35';
   const modBtn = (altTxt, imgSrc) => {
     img.alt = altTxt;
     img.src = imgSrc;
