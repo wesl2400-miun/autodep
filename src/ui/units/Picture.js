@@ -1,23 +1,22 @@
 import { newNode } from "../utils/utils.js";
 
 export class Picture {
-  constructor(path, parent) {
-    this._path = path;
+  constructor(parent) {
     this._root = newNode('picture', 
       null, null, parent);
   }
 
-  addSource = (name, brPoint, format) => {
+  addSource = (src, brPoint) => {
     const source = newNode('source', 
       null, null, this._root);
-    source.srcset = `${this._path}${name}.${format}`;
+    source.srcset = src;
     source.media = `(min-width: ${brPoint}px)`;
   }
 
-  addFallback = (name, alt) => {
+  addFallback = (src, alt) => {
     const img = newNode('img', 
       null, null, this._root);
-    img.src = `${this._path}${name}.jpg`;
+    img.src = src;
     img.alt = alt;
   }
 }

@@ -1,7 +1,9 @@
 import { STYLE } from "../refs/style.js";
 import { newImgBtn, newNode } from "../utils/utils.js";
 import { RouteList } from "./RouteList.js";
-import '../config/nav.js';
+import opMenImg from '../assets/open-menu.svg';
+import cloMenImg from '../assets/close-menu.svg';
+
 
 export class Nav {
   constructor(parent, routes) {
@@ -15,8 +17,8 @@ export class Nav {
     const menu = newNode('div', null, 
       STYLE.MENU, parent);
     const src = () => this._closed
-      ? './src/ui/assets/open-menu.svg'
-      : './src/ui/assets/close-menu.svg';
+      ? opMenImg
+      : cloMenImg;
     const alt = () => this._closed
       ? 'Öppna menyn'
       : 'Stäng menyn';
