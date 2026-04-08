@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { imagetools } from "vite-imagetools";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    imagetools(),
     ViteImageOptimizer({
       jpeg: { quality: 50},
       webp: { quality: 50},

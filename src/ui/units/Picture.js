@@ -10,7 +10,8 @@ export class Picture {
     const source = newNode('source', 
       null, null, this._root);
     source.srcset = src;
-    source.media = `(min-width: ${brPoint}px)`;
+    if(brPoint) source.media = 
+      `(min-width: ${brPoint}px)`;
   }
 
   addFallback = (src, alt) => {
