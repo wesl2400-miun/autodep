@@ -1,0 +1,202 @@
+/*
+* Återanvändbara variabler för färger och inställningar för typsnitt
+*/
+:root {
+  --primary: #364996;
+  --primary-variant: #fff480;
+  --secondary: #293771;
+  --secondary-variant: #191f34;
+  --surface: #bdd3ff;
+  --background: white;
+  --max-width: 700px;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+}
+
+/*
+* Använd flex container på dessa element
+*/
+body, 
+header, 
+.menu,
+.logo,
+#navbar, 
+#navbar ul,
+#navbar ul li,
+#navbar ul li a,
+main,
+section,
+h1,
+p {
+  display: flex;
+  flex-direction: column;
+}
+
+/*
+* Ta bort marginalerna på dessa element
+*/
+body,
+header,
+.logo,
+.menu {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*
+* Centrera dessa element
+*/
+body, 
+header,
+.logo,
+#navbar,
+#navbar ul,
+#navbar ul li,
+#navbar ul li a,
+main,
+section,
+h1,
+p {
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  width: 100vw;
+  background-color: var(--background);
+}
+
+/*
+* Sätt 100% i bredden och sträck bredden över hela behållaren
+*/
+header,
+.logo, 
+.menu,
+#navbar,
+#navbar ul,
+#navbar ul li,
+#navbar ul li a,
+section,
+h1,
+p {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/*
+* Stilen för logotypen
+*/
+.logo {
+  box-shadow: 0 3px 3px 0 #b0b0b0;
+  margin-bottom: 0.4rem;
+}
+
+/*
+* Stilen för menyknappen
+*/
+.menu {
+  max-width: var(--max-width);
+  background-color: var(--primary-variant);
+  justify-content: center;
+  align-items: end;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px 5px 0 0;
+}
+
+.menu button {
+  border: none;
+  background-color: var(--primary-variant);
+}
+
+.menu:focus {
+  outline: 1px 2px double #293771;
+}
+
+/*
+* Stilen för hela navigeringsfältet
+*/
+#navbar {
+  max-width: var(--max-width);
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary);
+}
+
+#navbar ul {
+  border-top: 2px solid var(--primary-variant);
+}
+
+#navbar ul li a,
+#navbar ul li a:link,
+#navbar ul li a:active {
+  color: var(--primary-variant);
+}
+
+#navbar ul li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0;
+  border-bottom: 2px solid var(--primary-variant);
+}
+
+#navbar ul li a:hover {
+  color: var(--primary-variant);
+  background-color: var(--secondary);
+}
+
+/*
+* Stilen för huvudinnehållet
+*/
+main {
+  width: 95%;
+  height: 100%;
+  max-width: var(--max-width);
+  margin-bottom: 4rem;
+}
+
+section {
+  padding: 0.3rem 1rem;
+  background-color: var(--surface);
+  color: var(--secondary-variant);
+}
+
+h1 {
+  background-color: var(--secondary);
+  padding: 0.3rem;
+  color: var(--primary-variant);
+  margin: 0;
+  margin-top: 0.5rem;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.5rem;
+}
+
+h2 {
+  padding: 0;
+}
+
+/*
+* Stilen för datorer och surfplattor
+*/
+@media screen and (min-width: 600px) {
+  .logo {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  #navbar ul li,
+  #navbar ul li a {
+    width: 160px;
+    border: none;
+    border-right: 2px solid var(--primary-variant);
+  }
+  #navbar ul {
+    border: none;
+    flex-direction: row;
+    justify-content: start;
+  }
+}
