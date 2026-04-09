@@ -1,7 +1,7 @@
 import { NODE_ID } from "../refs/node-id.js";
 import { node, picture } from "../utils/utils.js";
-import stockImg from '../assets/stockholm.jpg?w=640;400;250&format=webp;';
-import gothImg from '../assets/gothenburg.jpg?w=640;400;250&format=webp;';
+import stockImg from '../assets/stockholm.jpg?w=600;400;250&format=webp;';
+import gothImg from '../assets/gothenburg.jpg?w=600;400;250&format=webp;';
 import malmImg from '../assets/malmo.jpg?w=600;400;250&format=webp;';
 import uppImg from '../assets/uppsala.jpg?w=600;400;250&format=webp;';
 import linImg from '../assets/linkoping.jpg?w=600;400;250&format=webp;';
