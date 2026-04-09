@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   push:
   # Bygg projektet från denna gren.
-    branches: ['dev'] 
+    branches: ['prod'] 
 
   workflow_dispatch:
 
