@@ -2,6 +2,12 @@ import { defineConfig } from "vite";
 import { imagetools } from "vite-imagetools";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
+/**
+ * build-fältet konfigurerar undersidor så att de kan hittas av Vite.
+ * Vite är nämligen ett byggverktyg för ensidiga-applikationer.
+ * plugin-fältet lägger till och kör insticksmodulerna Vite Imagetools
+ * och Vite Plugin Image Optimizer
+ */
 export default defineConfig({
   build: {
     rollupOptions: {

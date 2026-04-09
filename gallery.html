@@ -3,21 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./src/ui/assets/mittfavicon.svg" />
+    <link rel="stylesheet" href="./src/ui/css/root.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend-baserad webbutveckling - Laboration 1</title>
+
+    <!-- SEO optimering-->
+    <meta name="description" content="Frontend-baserad webbutveckling. Se bilder som har optimerats med Vite Imagetools och Vite Plugin Image Optimizer.">
+    <title>Bilder - Laboration 1 | Frontend-baserad webbutveckling</title>
   </head>
   <body>
+    <!-- Sidhuvud -->
     <header>
       <div>
         <img height="140" src="./src/ui/assets/mittlogo.svg" alt="Laboration 1 - Logotyp">
       </div>
       <nav id="navbar"></nav>
     </header>
-    <div id="app"></div>
+    
+     <!-- Huvudinnehåll -->
     <main>
       <h1>Bilder</h1>
+      
+      <!-- Här genereras bilderna dynamiskt -->
       <div id="gallery"></div>
     </main>
+
+    <!-- Skript för navigering och bildgenering-->
     <script type="module" src="./src/ui/views/nav-view.js"></script>
     <script type="module" src="./src/ui/views/gallery-view.js"></script>
   </body>

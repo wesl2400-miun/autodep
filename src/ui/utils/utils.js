@@ -1,9 +1,11 @@
 import { Picture } from '../units/Picture.js';
 
+// Hämta ett existerande HTML-element via en referens
 export const node = (ref) => {
   return document.getElementById(ref);
 }
 
+// Skapa ett HTML-element
 export const newNode = (type, text = null, 
   style = null, parent = null) => {
   const tag = document.createElement(type);
@@ -13,6 +15,7 @@ export const newNode = (type, text = null,
   return tag;
 }
 
+// Skapa en knapp med en bild
 export const newImgBtn = (alt, src, parent) => {
   const btn = newNode('button', 
     null, null, parent);
@@ -28,6 +31,7 @@ export const newImgBtn = (alt, src, parent) => {
   return { btn, modBtn };
 }
 
+// Skapa ett Picture-objekt basert på en lista av responsiva bilder
 export const picture = (img, alt, parent) => {
   const pic = new Picture(parent);
   const last = img.length - 1;
