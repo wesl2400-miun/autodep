@@ -36,9 +36,9 @@ export const picture = (img, alt, parent) => {
   const pic = new Picture(parent);
   const last = img.length - 1;
   for(let i = 0; i < 2; i++)
-    pic.addSource(img[i], '1000');
+    pic.addSource(img[i], '800');
   for(let i = 2; i < 4; i++)
-    pic.addSource(img[i], '600');
+    pic.addSource(img[i], '500');
   pic.addSource(img[last - 1]);
   pic.addFallback(img[last], alt);
   return pic;

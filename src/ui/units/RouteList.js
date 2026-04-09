@@ -21,6 +21,6 @@ export class RouteList {
 
   // Visa ruttlistan
   show = () => {
-    this._root.style.display = 'block';
+    this._root.style.display = 'flex';
   }
 }
