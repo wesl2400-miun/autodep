@@ -21,8 +21,8 @@ export default defineConfig({
   plugins: [
     imagetools(),
     ViteImageOptimizer({
-      jpeg: { quality: 50},
-      webp: { quality: 50},
+      jpeg: { quality: 30},
+      webp: { quality: 30},
       svg: {
         plugins: [
           { name: 'removeViewBox', active: false },

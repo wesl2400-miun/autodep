@@ -24,5 +24,8 @@ export class Picture {
       null, null, this._root);
     img.src = src;
     img.alt = alt;
+    img.width = '250';
+    img.height = '100';
+    img.fetchPriority = 'high';
   }
 }

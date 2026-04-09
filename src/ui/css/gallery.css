@@ -19,3 +19,11 @@
   padding: 0.5rem;
   background-color: var(--background);
 }
+
+#gallery picture img {
+  width: 100%;
+  max-width: 640px;
+  min-width: 250px;
+  height: auto;
+  background-color: var(--background);
+}

@@ -23,6 +23,7 @@ export const newImgBtn = (alt, src, parent) => {
     null, null, btn);
   img.width = '35';
   img.height = '35';
+  img.fetchPriority = 'high';
   const modBtn = (altTxt, imgSrc) => {
     img.alt = altTxt;
     img.src = imgSrc;
