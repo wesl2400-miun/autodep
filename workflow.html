@@ -16,8 +16,27 @@
     <div id="app"></div>
     <main>
       <h1>Arbetsprocess</h1>
-      <p></p>
+      <section>
+        <h2>Verktyg</h2>
+        <p>Verktyg som används under utvecklingen är Node.js, Vite, Github Actions, Vite Plugin Image Optimizer och Vite Imagetools.</p>
+        <p>Node.js används för att hantera beroenden och möjliggöra användningen av de övriga verktygen som bygger på den.</p>
+        <p>Vite är ett modern byggvekrtyg och används för att strukturera, optimera och bunta projektet för publicering. Verktyget väljs eftersom det är lätt att använda, är effektiv, kompatibel med många moderna ramverk och har stöd för flera användbara insticksmoduler.</p>
+        <p>Vite Plugin Image Optimizer och Vite Image Tools är oberoende insticksmoduler för Vite. Den ena komprimerar bilder och den andra skapar responsiva bilder i olika format och dimensioner.</p>
+        <p>Webbplatsen publiceras till Github Pages med hjälp av ett arbetsflöde och Github Actions. Github Pages väljs för publicering eftersom plattformen tillåter versionshantering, automatisering och publicering av frontend-applikationer på en och samma plats, vilket underlättar utvecklingen.</p>
+      </section>
+      <section>
+        <h2>Automatisering</h2>
+        <p>Automatisering sker via Github Actions och ett arbetsflöde skrivet i dataserialiseringsspråket YAML. Skriptet startas när Git-grenen 'dev' respektive 'prod' uppdateras.</p>
+        <p>Först förbereds Github Pages-miljön. Därefter tas bort den gamla gh-pages-grenen där publiceringsfilerna ligger så att de gamla filerna inte står i konflikt med de nya.</p>
+        <p>Beroenden från package-lock.json installeras och projektet byggs med hjälp av Vite och slutligen publiceras till Github Pages från katalogen 'dist' där den Vite-optimerade projektversionen ligger.</p>
+        <p>När Vite bygger projeketet optimeras samtidigt alla bilder via insticksmodulerna. Här är ordningen av insticksmodulerna i vite.config.js-filen viktig, eftersom först kör Vite Imagetools och skapar responsiva bilder och strax efter komprimeras dessa med hjälp av Vite Plugin Image Optimizer.</p>
+      </section>
+      <section>
+        <h2>Metod</h2>
+        <p>Projektet skapas med hjälp av packethanteraren NPM och Vite via Node.js-miljön. Katalogerna och filerna struktureras och undersidorna utformas. Konfigurationerna görs för arbetsflödet och för Vite och publiceringen testas därefter. Sist sker CSS stilisering när alla vyer redan är utformade och funktionella.</p>
+        <p>Git-grenen 'dev' används för utvecklingen och slås sedan samman med 'prod'-grenen först när webbplatsen är redo för offentlig publicering.</p>
+      </section>
     </main>
-    <script type="module" src="./src/ui/main.js"></script>
+    <script type="module" src="./src/ui/views/nav-view.js"></script>
   </body>
 </html>
